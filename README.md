@@ -10,28 +10,23 @@
 
 ## Description
 
-This project implements several **Artificial Intelligence algorithms** for controlling Pacman in a maze environment.
-
-The objective is to develop intelligent agents capable of navigating the maze, collecting food, and avoiding ghosts using classical **search algorithms and multi-agent decision-making techniques**.
-
+This project implements several **Artificial Intelligence algorithms** for controlling Pacman in a maze environment.  
+The objective is to develop intelligent agents capable of navigating the maze, collecting food, and avoiding ghosts using classical **search algorithms and multi-agent decision-making techniques**.  
 The project is based on the well-known **Pacman AI framework developed by UC Berkeley (CS188)** and includes implementations for both **search algorithms** and **multi-agent adversarial search**.
 
 
-## Project Components
-
+## Project Components  
 The project contains two main parts:
 
 ### Search Algorithms + Search Problems
-Implementation of classical graph search algorithms used to find optimal paths in the Pacman environment.
-
+Implementation of classical graph search algorithms used to find optimal paths in the Pacman environment.  
 In addition to implementing classical search algorithms, the project also includes several complex search problems that require designing appropriate state representations and heuristic functions.
 
 The following search algorithms were implemented:
 
 #### *Depth First Search (DFS)*
 
-DFS explores the deepest nodes of the search tree first.
-
+DFS explores the deepest nodes of the search tree first.  
 Characteristics:
 
 - Uses a stack data structure
@@ -44,8 +39,7 @@ Characteristics:
 
 #### *Breadth First Search (BFS)*
 
-BFS explores the search tree level by level.
-
+BFS explores the search tree level by level.  
 Characteristics:
 
 - Uses a queue data structure
@@ -57,8 +51,7 @@ Characteristics:
 
 #### *Uniform Cost Search (UCS)*
 
-UCS expands nodes with the lowest path cost first.
-
+UCS expands nodes with the lowest path cost first.  
 Characteristics:
 
 - Uses a priority queue
@@ -70,8 +63,7 @@ Characteristics:
 
 #### *A star Search*
 
-A* combines path cost with a heuristic function.
-
+A* combines path cost with a heuristic function.  
 Formula:
 
 ```
@@ -97,15 +89,13 @@ Search problems simulate realistic navigation challenges for the Pacman agent:
 
 #### *Finding All the Corners (Corners Problem)*
 
-In the **Corners Problem**, Pacman must find a path that visits all four corners of the maze.
-
+In the **Corners Problem**, Pacman must find a path that visits all four corners of the maze.  
 The difficulty of this problem lies in designing an appropriate **state representation** that keeps track of:
 
 - Pacman's current position
 - which corners have already been visited
 
-The state space therefore includes both the position and the visited corners.
-
+The state space therefore includes both the position and the visited corners.   
 To solve this problem efficiently, a heuristic function was implemented to estimate the remaining distance required to visit all remaining corners.
 
 <p align="center">
@@ -115,10 +105,8 @@ To solve this problem efficiently, a heuristic function was implemented to estim
 
 #### *Corners Problem Heuristic*
 
-A heuristic function was designed to guide the A* search algorithm in solving the Corners Problem efficiently.
-
-The heuristic estimates the remaining distance needed to visit all unvisited corners.
-
+A heuristic function was designed to guide the A* search algorithm in solving the Corners Problem efficiently.  
+The heuristic estimates the remaining distance needed to visit all unvisited corners.  
 Typical approaches include computing:
 
 - the Manhattan distance to the closest corner
@@ -133,15 +121,13 @@ The heuristic must remain **admissible and consistent** to guarantee optimal sol
 
 #### *Eating All the Dots (Food Search Problem)*
 
-In this problem, Pacman must collect **all food dots present in the maze**.
-
+In this problem, Pacman must collect **all food dots present in the maze**.  
 The state representation includes:
 
 - Pacman's position
 - the remaining food grid
 
-This problem has a much larger state space compared to the Corners Problem, which makes heuristic design essential for efficient search.
-
+This problem has a much larger state space compared to the Corners Problem, which makes heuristic design essential for efficient search.  
 The A* algorithm is used together with a heuristic that estimates the distance to the farthest remaining food dot.
 
 <p align="center">
@@ -151,12 +137,9 @@ The A* algorithm is used together with a heuristic that estimates the distance t
 
 #### *Suboptimal Search*
 
-In some scenarios, optimal search may be computationally expensive due to the large search space.
-
-Suboptimal search strategies can be applied to find solutions faster while sacrificing optimality.
-
-For example, heuristics may prioritize reaching food quickly rather than guaranteeing the shortest possible path.
-
+In some scenarios, optimal search may be computationally expensive due to the large search space.  
+Suboptimal search strategies can be applied to find solutions faster while sacrificing optimality.  
+For example, heuristics may prioritize reaching food quickly rather than guaranteeing the shortest possible path.  
 These strategies allow Pacman to make faster decisions in complex environments.
 
 <p align="center">
@@ -183,8 +166,7 @@ The agent evaluates each possible action and selects the best one.
 
 #### *Minimax Algorithm*
 
-Minimax models the interaction between Pacman and ghosts as a **two-player adversarial game**.
-
+Minimax models the interaction between Pacman and ghosts as a **two-player adversarial game**.  
 Pacman tries to **maximize the score**, while ghosts attempt to **minimize it**.
 
 <p align="center">
@@ -194,10 +176,8 @@ Pacman tries to **maximize the score**, while ghosts attempt to **minimize it**.
 
 #### *Alpha-Beta Pruning*
 
-Alpha-Beta pruning is an optimization of the Minimax algorithm.
-
-It reduces the number of nodes explored in the search tree by eliminating branches that cannot affect the final decision.
-
+Alpha-Beta pruning is an optimization of the Minimax algorithm.  
+It reduces the number of nodes explored in the search tree by eliminating branches that cannot affect the final decision.  
 Advantages:
 
 - faster decision making
