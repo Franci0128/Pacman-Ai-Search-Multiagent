@@ -325,7 +325,7 @@ This project demonstrates several important concepts in **Artificial Intelligenc
 
 
 ## Author
-
-Francesca Lara Szarka 
+Francesca Lara Szarka  
 Computer Science Student  
 Technical University of Cluj-Napoca
+
