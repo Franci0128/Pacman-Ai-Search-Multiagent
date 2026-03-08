@@ -188,7 +188,7 @@ Advantages:
 </p>
 
 
-## Project Structure
+## Project Structure - spme of the files
 
 ```
 pacman-ai-project
