@@ -238,7 +238,7 @@ pacman-ai-project
 │   └── test_cases
 │
 ├── doc_ia.pdf                  # Project documentation
-│
+├── images                      # Images for README
 └── README.md
 ```
 
@@ -311,20 +311,6 @@ python pacman.py -p MinimaxAgent -l minimaxClassic -a depth=3
 ```
 python pacman.py -p AlphaBetaAgent -l minimaxClassic -a depth=3
 ```
-
-
-## Algorithms Implemented
-
-| Algorithm | Type |
-|-|-|
-| Depth First Search | Graph Search |
-| Breadth First Search | Graph Search |
-| Uniform Cost Search | Cost-based Search |
-| A* Search | Heuristic Search |
-| Reflex Agent | Reactive Agent |
-| Minimax | Adversarial Search |
-| Alpha-Beta | Optimized Minimax |
-
 
 ## Concepts Demonstrated
 
